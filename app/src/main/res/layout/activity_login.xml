@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
             <ImageView
                 android:layout_width="100dp"
@@ -38,22 +38,9 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/white"/>
-            <!--<EditText-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:hint="@string/email"-->
-                <!--android:inputType="textEmailAddress"-->
-                <!--android:textColorHint="@color/white"-->
-                <!--android:background="@android:color/transparent"-->
-                <!--android:padding="8dp"-->
-                <!--android:ems="10"-->
-                <!--android:drawablePadding="12dp"-->
-                <!--android:drawableLeft="@drawable/ic_account_circle_black_24dp"/>-->
-            <!--<View-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="1dp"-->
-                <!--android:background="@color/white"/>-->
+                android:background="@color/white"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"/>
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,27 +55,44 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/white"/>
+                android:background="@color/white"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"/>
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginStart="6dp"
                 android:text="@string/remember"/>
             <Button
+                android:id="@+id/login_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:background="@drawable/login_background"
                 android:text="@string/login"
                 android:clickable="true"
+                android:focusable="true"
                 android:textColor="@color/colorAccent"
-                android:textAllCaps="false"/>
+                android:textAllCaps="false"
+                />
+            <TextView
+                android:layout_marginTop="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@string/not_registered"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"/>
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/sign_up_background"
                 android:clickable="true"
+                android:focusable="true"
+                android:onClick="sign_up"
                 android:text="@string/sign_up"
                 android:textColor="@color/white"
                 android:textAllCaps="false"/>
