@@ -14,17 +14,21 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        Button login=findViewById(R.id.login_btn);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(LoginActivity.this, "login", Toast.LENGTH_SHORT).show();
-            }
-        });
+//        Button login=findViewById(R.id.login_btn);
+//        login.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(LoginActivity.this, "login", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
     }
     public void sign_up(View view){
         Intent i=new Intent(this,SignUpActivity.class);
+        startActivity(i);
+    }
+    public void login(View view){
+        Intent i=new Intent(this,HomeActivity.class);
         startActivity(i);
     }
 

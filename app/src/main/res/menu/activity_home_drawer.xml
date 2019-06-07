@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_home_icon"
+        android:title="@string/menu_home" />
+
+    <item android:title="Select Option">
+        <menu>
+            <item
+                android:id="@+id/nav_budget_hotel"
+                android:icon="@drawable/ic_building"
+                android:title="@string/menu_budget_hotel" />
+            <item
+                android:id="@+id/nav_premium_hotel"
+                android:icon="@drawable/ic_premium_hotel"
+                android:title="@string/menu_premium_hotel" />
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/menu_send" />
+            <item
+                android:id="@+id/nav_log_out"
+                android:icon="@drawable/ic_log_out"
+                android:title="@string/menu_log_out" />
+        </menu>
+    </item>
+
+</menu>
