@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
     public void login(View view){
         Intent i=new Intent(this,HomeActivity.class);
         startActivity(i);
-
     }
 
 

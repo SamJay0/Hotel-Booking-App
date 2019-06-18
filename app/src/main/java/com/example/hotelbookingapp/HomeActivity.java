@@ -22,18 +22,19 @@ import java.util.ArrayList;
 public class HomeActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    ListView listView;
+    ArrayList <Hotel>hotels;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         //create a list of hotels
-        ArrayList <Hotel>hotels=new ArrayList<Hotel>();
+        hotels=new ArrayList<Hotel>();
         for(int i=0;i<50;i++){
-            hotels.add(new Hotel("SamJay Apartments",1500));
+            hotels.add(new Hotel("Serena Hotel",1500));
         }
-        HotelAdapter hotelAdapter=new HotelAdapter(this,hotels);
-        ListView listView=findViewById(R.id.list);
-        listView.setAdapter(hotelAdapter);
+        displayListOfHotels(hotels);
         //custom toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -88,12 +89,25 @@ public class HomeActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-                //return home
+            hotels=new ArrayList<Hotel>();
+            for(int i=0;i<50;i++){
+                hotels.add(new Hotel("Serena Hotel",1500));
+            }
+            displayListOfHotels(hotels);
         } else if (id == R.id.nav_budget_hotel) {
-            Toast.makeText(this, "budget hotel", Toast.LENGTH_SHORT).show();
+            //create a list of hotels
+            hotels=new ArrayList<Hotel>();
+            for(int i=0;i<50;i++){
+                hotels.add(new Hotel("JaySam Apartments",2000));
+            }
+            displayListOfHotels(hotels);
 
         } else if (id == R.id.nav_premium_hotel) {
-            Toast.makeText(this, "premium hotel", Toast.LENGTH_SHORT).show();
+            hotels=new ArrayList<Hotel>();
+            for(int i=0;i<50;i++){
+                hotels.add(new Hotel("Jacy Apartments",4000));
+            }
+            displayListOfHotels(hotels);
 
         }  else if (id == R.id.nav_share) {
             Toast.makeText(this, "share", Toast.LENGTH_SHORT).show();
@@ -115,5 +129,10 @@ public class HomeActivity extends AppCompatActivity
     public void showLocationAndBook(View view){
         Toast.makeText(this, "show location and enable booking", Toast.LENGTH_SHORT).show();
 
+    }
+    public void displayListOfHotels(ArrayList<Hotel> mhotels){
+        HotelAdapter hotelAdapter = new HotelAdapter(this,mhotels);
+        listView=findViewById(R.id.list);
+        listView.setAdapter(hotelAdapter);
     }
 }
