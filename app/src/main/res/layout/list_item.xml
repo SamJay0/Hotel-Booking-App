@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:id="@+id/hotel_container"
     android:orientation="horizontal"
-    android:background="@color/white"
+    android:background="@color/creamwhite"
     android:padding="16dp"
     android:onClick="showLocationAndBook"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/location_icon"
         android:onClick="showLocationAndBook"
@@ -39,6 +39,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
             android:background="@drawable/price_textview_background"
             />
 

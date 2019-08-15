@@ -24,9 +24,10 @@
                 android:layout_marginBottom="20dp"
                 android:src="@drawable/ic_building"/>
             <EditText
+                android:id="@+id/login_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/username"
+                android:hint="@string/email"
                 android:inputType="textPersonName"
                 android:textColorHint="@color/white"
                 android:background="@android:color/transparent"
@@ -42,6 +43,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginStart="40dp"/>
             <EditText
+                android:id="@+id/login_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/passHint"
@@ -59,6 +61,7 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginStart="40dp"/>
             <CheckBox
+                android:id="@+id/remember_me"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
@@ -87,6 +90,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_marginLeft="20dp"/>
             <Button
+                android:id="@+id/_sign_up_if_not_member"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"

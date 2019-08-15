@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hotel Booking App</string>
+    <string name="app_name">Book Hotel</string>
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
     <string name="username">Username</string>
@@ -8,7 +8,7 @@
     <string name="passConfirm">re-enter password</string>
     <string name="remember">Remember me</string>
     <string name="not_registered">Not a Member? </string>
-    <string name="title_activity_home">HomeActivity</string>
+    <string name="title_activity_home">Home</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">SamJay0</string>

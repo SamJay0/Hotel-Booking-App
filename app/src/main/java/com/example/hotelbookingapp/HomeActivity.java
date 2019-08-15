@@ -1,5 +1,6 @@
 package com.example.hotelbookingapp;
 
+import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -14,6 +15,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -31,10 +33,11 @@ public class HomeActivity extends AppCompatActivity
         setContentView(R.layout.activity_home);
         //create a list of hotels
         hotels=new ArrayList<Hotel>();
-        for(int i=0;i<50;i++){
+        for(int i=0;i<500;i++){
             hotels.add(new Hotel("Serena Hotel",1500));
         }
         displayListOfHotels(hotels);
+        ListView listView=findViewById(R.id.list);
         //custom toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -77,7 +80,7 @@ public class HomeActivity extends AppCompatActivity
             Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show();
         }
         else if(id == R.id.action_about){
-            Toast.makeText(this, "about", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Developer : SamJay", Toast.LENGTH_LONG).show();
         }
 
         return super.onOptionsItemSelected(item);
@@ -90,21 +93,22 @@ public class HomeActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             hotels=new ArrayList<Hotel>();
-            for(int i=0;i<50;i++){
+            for(int i=0;i<500;i++){
                 hotels.add(new Hotel("Serena Hotel",1500));
             }
             displayListOfHotels(hotels);
+
         } else if (id == R.id.nav_budget_hotel) {
             //create a list of hotels
             hotels=new ArrayList<Hotel>();
-            for(int i=0;i<50;i++){
+            for(int i=0;i<500;i++){
                 hotels.add(new Hotel("JaySam Apartments",2000));
             }
             displayListOfHotels(hotels);
 
         } else if (id == R.id.nav_premium_hotel) {
             hotels=new ArrayList<Hotel>();
-            for(int i=0;i<50;i++){
+            for(int i=0;i<500;i++){
                 hotels.add(new Hotel("Jacy Apartments",4000));
             }
             displayListOfHotels(hotels);
