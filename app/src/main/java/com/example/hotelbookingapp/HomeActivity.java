@@ -19,6 +19,8 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 import java.util.ArrayList;
 
 public class HomeActivity extends AppCompatActivity
@@ -26,7 +28,8 @@ public class HomeActivity extends AppCompatActivity
 
     ListView listView;
     ArrayList <Hotel>hotels;
-
+    FirebaseAuth mFirebaseAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -121,6 +124,7 @@ public class HomeActivity extends AppCompatActivity
 
         }
         else if(id == R.id.nav_log_out){
+            FirebaseAuth.getInstance().signOut();
             Intent i =new Intent(this,LoginActivity.class);
             startActivity(i);
         }
