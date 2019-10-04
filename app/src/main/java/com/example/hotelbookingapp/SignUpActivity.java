@@ -25,20 +25,7 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-//        Button signup=findViewById(R.id.sign_up_btn);
-//        TextView login_if_member =findViewById(R.id.login_if_member);
-//        signup.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(SignUpActivity.this, "sign up", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-////        login_if_member.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View v) {
-////                Toast.makeText(SignUpActivity.this, "login", Toast.LENGTH_SHORT).show();
-////            }
-////        });
+
         mfirebaseAuth=FirebaseAuth.getInstance();
         emailID=findViewById(R.id.sign_up_email);
         password=findViewById(R.id.sign_up_password);
@@ -64,7 +51,7 @@ public class SignUpActivity extends AppCompatActivity {
                    password1.setError("please enter confirmation password");
                    password1.requestFocus();
                 }
-                else if(email.isEmpty() && pass.isEmpty() && pass1.isEmpty()){
+                else if(email.isEmpty() || pass.isEmpty() || pass1.isEmpty()){
                     Toast.makeText(SignUpActivity.this, "fields are empty", Toast.LENGTH_SHORT).show();
                 }
                 else if(!(email.isEmpty() && pass.isEmpty() && pass1.isEmpty())){

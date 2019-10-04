@@ -17,9 +17,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 
@@ -35,11 +37,11 @@ public class HomeActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         //create a list of hotels
-        hotels=new ArrayList<Hotel>();
-        for(int i=0;i<500;i++){
-            hotels.add(new Hotel("Serena Hotel",1500));
-        }
-        displayListOfHotels(hotels);
+//        hotels=new ArrayList<Hotel>();
+//        for(int i=0;i<500;i++){
+//            hotels.add(new Hotel("Serena Hotel",1500));
+//        }
+//        displayListOfHotels(hotels);
         ListView listView=findViewById(R.id.list);
         //custom toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -52,6 +54,9 @@ public class HomeActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
+
+        //update User info
+//        updateUserInfo();
 
 
 

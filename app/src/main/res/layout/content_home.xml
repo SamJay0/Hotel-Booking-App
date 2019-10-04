@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/hotelpic"
     android:id="@+id/list"
     tools:context=".HomeActivity"
     tools:showIn="@layout/app_bar_home">
+
 
 </ListView>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,10 +30,13 @@ public class LoginActivity extends AppCompatActivity {
         password = findViewById(R.id.login_password);
         login = findViewById(R.id.login_btn);
         signUp = findViewById(R.id._sign_up_if_not_member);
+
+        mFirebaseAuth=FirebaseAuth.getInstance();
 //
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
                 FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
                 if (mFirebaseUser != null) {
                     Toast.makeText(LoginActivity.this, "You are logged in", Toast.LENGTH_SHORT).show();
@@ -86,7 +90,6 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Toast.makeText(this, "app started", Toast.LENGTH_SHORT).show();
-//        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
+        mFirebaseAuth.addAuthStateListener(mAuthStateListener);
     }
 }
